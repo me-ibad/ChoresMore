@@ -16,13 +16,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "mithu"
+      "bundleIdentifier": "choresmore"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.encodersoft.choresmore"
     },
     "web": {
       "favicon": "./assets/favicon.png"

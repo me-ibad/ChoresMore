@@ -27,21 +27,13 @@ export default function Signin({ navigation }) {
       <Header name='Log in or sign up' />
       <ScrollView style={styles.viewScroll}>
         <View style={styles.viewImg}>
-          <Text
-            style={{ color: colors.black, fontSize: 20, fontWeight: 'bold' }}
-          >
-            Chores & More (logo)
-          </Text>
+          <Image
+            source={require('../../assets/img/logo.png')}
+            style={styles.imghead}
+          />
         </View>
 
         <View style={styles.viewBody}>
-          {/* <View style={styles.viewCountry}>
-            <Text style={[styles.textStyl, styles.textCountry]}>
-              Country/Region
-            </Text>
-            <Text style={[styles.textStyl]}>Pakistan (+92)</Text>
-          </View> */}
-
           <TextInput
             style={styles.inputText}
             placeholder='Username/ Email'
@@ -72,20 +64,7 @@ export default function Signin({ navigation }) {
 
         <View style={styles.footer}>
           <View style={styles.btnview}>
-            {/* <TouchableOpacity
-              style={styles.applestyle}
-              onPress={() => Alert.alert('Login to Apple')}
-            >
-              <AntDesign name='apple1' color={colors.white} size={20} />
-              <Text style={[styles.textStyl, styles.textapple]}>
-                Continue with Apple
-              </Text>
-            </TouchableOpacity> */}
-
-            <TouchableOpacity
-              style={styles.googlestyle}
-              onPress={() => Alert.alert('Login to Google')}
-            >
+            <TouchableOpacity style={styles.googlestyle}>
               <AntDesign name='google' color={colors.black} size={20} />
               <Text style={[styles.textapple, styles.textStyl]}>
                 Continue with Google
@@ -93,10 +72,7 @@ export default function Signin({ navigation }) {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity
-            style={styles.facebookstyle}
-            onPress={() => Alert.alert('Login to Facebook')}
-          >
+          <TouchableOpacity style={styles.facebookstyle}>
             <MaterialIcons name='facebook' color={colors.white} size={20} />
             <Text style={[styles.textStyl, styles.textapple]}>
               Continue with Facebook
@@ -122,8 +98,8 @@ const styles = StyleSheet.create({
     color: colors.light,
   },
   imghead: {
-    height: height * 0.3,
-    width: width * 0.9,
+    height: height * 0.15,
+    width: width,
   },
   viewImg: {
     marginHorizontal: 10,
