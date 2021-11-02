@@ -31,17 +31,17 @@ const CleaningData = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
     title: 'Laundry',
-    img: 'https://img.freepik.com/free-vector/clothes-with-laundry-service-icons_24877-50300.jpg?size=338&ext=jpg',
+    img: 'https://image.freepik.com/free-photo/laundry-room-with-washing-machine-dirty-clothes-basket-iron-little-shelf-with-neatly-folded-linen-domestic-room-interior-washing-concept_95891-1666.jpg',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
     title: 'Cleaning',
-    img: 'https://image.freepik.com/free-vector/cleaners-with-cleaning-products-housekeeping-service_18591-52068.jpg',
+    img: 'https://image.freepik.com/free-photo/disinfecting-home_155003-9129.jpg',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Cooking',
-    img: 'https://image.freepik.com/free-vector/realistic-flying-ingredients_23-2147856679.jpg',
+    img: 'https://img.freepik.com/free-photo/close-up-cook-pouring-cheese-pasta_23-2148584808.jpg?size=338&ext=jpg',
   },
 ];
 
@@ -49,12 +49,12 @@ const HomeServiceData = [
   {
     id: '1',
     title: 'Repairs',
-    img: 'https://image.freepik.com/free-vector/maintenance-concept-illustration_114360-391.jpg',
+    img: 'https://image.freepik.com/free-photo/electrician-construction-worker-overalls-with-drill-during-installation-sockets-home-renovation-concept_169016-8630.jpg',
   },
   {
     id: '2',
     title: 'Sinks & More',
-    img: 'https://img.freepik.com/free-vector/kitchen-table-illustration_1284-39940.jpg?size=338&ext=jpg',
+    img: 'https://image.freepik.com/free-photo/beautiful-modern-style-faucet-with-steel-sink-kitchen_181624-40744.jpg',
   },
   {
     id: '3',
@@ -67,18 +67,18 @@ const OddJobsData = [
   {
     id: '1',
     title: 'Requests',
-    img: 'https://image.freepik.com/free-vector/freight-quote-request-abstract-concept-illustration_335657-3952.jpg',
+    img: 'https://image.freepik.com/free-photo/customer-service-performance-data-application-form-concept_53876-134001.jpg',
   },
   {
     id: '2',
     title: 'Opportunities',
-    img: 'https://img.freepik.com/free-vector/ambition-abstract-concept-illustration-business-ambition-determination-setting-big-goal-making-fast-career-self-confident-getting-what-you-want-desire-success_335657-33.jpg?size=338&ext=jpg',
+    img: 'https://image.freepik.com/free-photo/businesswoman-sitting-desk-work-with-financial-documents-company_1150-10653.jpg',
   },
-  {
-    id: '3',
-    title: 'Auto Fix',
-    img: 'https://image.freepik.com/free-vector/hand-with-wrench-neon-sign_1262-15581.jpg',
-  },
+  // {
+  //   id: '3',
+  //   title: 'Auto Fix',
+  //   img: 'https://image.freepik.com/free-vector/hand-with-wrench-neon-sign_1262-15581.jpg',
+  // },
 ];
 
 const ShoppingData = [
@@ -86,25 +86,25 @@ const ShoppingData = [
     id: '1',
     title: 'Grass Maintenance',
     subtitle: 'NEW ARRIVALS',
-    img: 'https://image.freepik.com/free-vector/dandelion-removal-abstract-concept-vector-illustration-garden-maintenance-weed-free-lawn-selective-herbicides-use-organic-gardening-grass-seed-lawn-mowing-backyard-abstract-metaphor_335657-4119.jpg',
+    img: 'https://image.freepik.com/free-photo/lawn-mover-machine-cut-green-grass-hobby-planting-home-garden_39768-4677.jpg',
   },
   {
     id: '2',
     title: 'Weekly Maintenance',
     subtitle: 'NEW ARRIVALS',
-    img: 'https://image.freepik.com/free-vector/24-7-timer-concept_108855-794.jpg',
+    img: 'https://image.freepik.com/free-photo/unrecognizable-male-plumber-standing-near-kitchen-sink-showing-thumb-up_1098-17823.jpg',
   },
   {
     id: '3',
     title: 'Shrubs & Stuff',
     subtitle: 'NEW ARRIVALS',
-    img: 'https://image.freepik.com/free-vector/vertical-green-city-illustration_335657-4644.jpg',
+    img: 'https://image.freepik.com/free-photo/sunset-hwange-national-park-zimbabwe_181624-21009.jpg',
   },
   {
     id: '4',
     title: 'Preventative Care',
     subtitle: 'TOP BRANDS',
-    img: 'https://image.freepik.com/free-vector/prevent-epidemic-rebound-concept-illustration_114360-3227.jpg',
+    img: 'https://image.freepik.com/free-photo/doctor-hold-antiseptic-masks-his-hand_1157-31550.jpg',
   },
 ];
 
