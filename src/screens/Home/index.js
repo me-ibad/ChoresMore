@@ -27,107 +27,84 @@ import gstyles from '@common/gstyles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Searchbar from '@components/Searchbar';
 
-const renderHeader = () => (
-  <View style={styles.header}>
-    <View style={styles.panelHeader}>
-      <View style={styles.panelHandle} />
-    </View>
-  </View>
-);
-
-const CategoryData = [
+const CleaningData = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'Grocery',
-    subtitle: 'you will get ordinary med',
-    img: 'https://i.ibb.co/prRLjbC/Grocery.png',
+    title: 'Laundry',
+    img: 'https://image.freepik.com/free-photo/laundry-room-with-washing-machine-dirty-clothes-basket-iron-little-shelf-with-neatly-folded-linen-domestic-room-interior-washing-concept_95891-1666.jpg',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Restaurants',
-    subtitle: 'you will get ordinary med',
-    img: 'https://i.ibb.co/BtD9DYL/Restaurants.png',
+    title: 'Cleaning',
+    img: 'https://image.freepik.com/free-photo/disinfecting-home_155003-9129.jpg',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Medicine',
-    subtitle: 'you will get ordinary med',
-    img: 'https://i.ibb.co/5K029v7/Medicine.png',
+    title: 'Cooking',
+    img: 'https://img.freepik.com/free-photo/close-up-cook-pouring-cheese-pasta_23-2148584808.jpg?size=338&ext=jpg',
   },
 ];
 
 const HomeServiceData = [
   {
     id: '1',
-    title: 'AC Repair',
-
-    img: 'https://i.ibb.co/3pCk8Y5/AC-Repair.png',
+    title: 'Repairs',
+    img: 'https://image.freepik.com/free-photo/electrician-construction-worker-overalls-with-drill-during-installation-sockets-home-renovation-concept_169016-8630.jpg',
   },
   {
     id: '2',
-    title: 'Home Clean',
-
-    img: 'https://i.ibb.co/2kGCr6C/Home-Clean.png',
+    title: 'Sinks & More',
+    img: 'https://image.freepik.com/free-photo/beautiful-modern-style-faucet-with-steel-sink-kitchen_181624-40744.jpg',
   },
   {
     id: '3',
-    title: 'Move Store',
-
-    img: 'https://i.ibb.co/V9RWvPp/Move-Store.png',
+    title: 'Auto Fix',
+    img: 'https://image.freepik.com/free-vector/hand-with-wrench-neon-sign_1262-15581.jpg',
   },
+];
+
+const OddJobsData = [
+  {
+    id: '1',
+    title: 'Requests',
+    img: 'https://image.freepik.com/free-photo/customer-service-performance-data-application-form-concept_53876-134001.jpg',
+  },
+  {
+    id: '2',
+    title: 'Opportunities',
+    img: 'https://image.freepik.com/free-photo/businesswoman-sitting-desk-work-with-financial-documents-company_1150-10653.jpg',
+  },
+  // {
+  //   id: '3',
+  //   title: 'Auto Fix',
+  //   img: 'https://image.freepik.com/free-vector/hand-with-wrench-neon-sign_1262-15581.jpg',
+  // },
 ];
 
 const ShoppingData = [
   {
     id: '1',
-    title: 'Electronics',
-    subtitle: 'BEST SELLER',
-    img: 'https://i.ibb.co/dWDjwd8/Electronics.png',
+    title: 'Grass Maintenance',
+    subtitle: 'NEW ARRIVALS',
+    img: 'https://image.freepik.com/free-photo/lawn-mover-machine-cut-green-grass-hobby-planting-home-garden_39768-4677.jpg',
   },
   {
     id: '2',
-    title: 'Fashions',
-    subtitle: 'TRENDING',
-    img: 'https://i.ibb.co/D1ZLBfL/Fashions.png',
+    title: 'Weekly Maintenance',
+    subtitle: 'NEW ARRIVALS',
+    img: 'https://image.freepik.com/free-photo/unrecognizable-male-plumber-standing-near-kitchen-sink-showing-thumb-up_1098-17823.jpg',
   },
   {
     id: '3',
-    title: 'Homes',
+    title: 'Shrubs & Stuff',
     subtitle: 'NEW ARRIVALS',
-    img: 'https://i.ibb.co/bdhNv6x/Homes.png',
+    img: 'https://image.freepik.com/free-photo/sunset-hwange-national-park-zimbabwe_181624-21009.jpg',
   },
   {
     id: '4',
-    title: 'Mobiles',
+    title: 'Preventative Care',
     subtitle: 'TOP BRANDS',
-    img: 'https://i.ibb.co/zSh81fJ/Mobiles.png',
-  },
-];
-
-const AutomobileData = [
-  {
-    id: '1',
-    title: 'Bikes',
-    subtitle: 'BEST SELLER',
-    img: 'https://i.ibb.co/JsXqbKJ/Bikes.png',
-  },
-  {
-    id: '2',
-    title: 'New Cars',
-    subtitle: 'TRENDING',
-    img: 'https://i.ibb.co/RNZthvy/New-Cars.png',
-  },
-  {
-    id: '3',
-    title: 'Parts',
-    subtitle: 'NEW ARRIVALS',
-    img: 'https://i.ibb.co/4tPxj8S/Parts.png',
-  },
-  {
-    id: '4',
-    title: 'Used Cars',
-    subtitle: 'TOP BRANDS',
-    img: 'https://i.ibb.co/1fMPB5j/Used-Cars.png',
+    img: 'https://image.freepik.com/free-photo/doctor-hold-antiseptic-masks-his-hand_1157-31550.jpg',
   },
 ];
 
@@ -141,8 +118,10 @@ const Category = ({ item }) => {
         uri: item.img,
       }}
     >
-      <Text style={styles.texthead}>{item.title}</Text>
-      <Text style={styles.subtext}>Enjoy 50% Off and more</Text>
+      <View style={styles.viewTitle}>
+        <Text style={styles.texthead}>{item.title}</Text>
+      </View>
+      {/* <Text style={styles.subtext}>Enjoy 50% Off and more</Text> */}
     </ImageBackground>
   );
 };
@@ -155,21 +134,6 @@ function CategoryOptions(props) {
     </View>
   );
 }
-
-const HomeService = ({ item }) => {
-  return (
-    <ImageBackground
-      resizeMode='stretch'
-      style={styles.ImageBackground}
-      imageStyle={{ borderRadius: 5 }}
-      source={{
-        uri: item.img,
-      }}
-    >
-      <Text style={styles.texthead}>{item.title}</Text>
-    </ImageBackground>
-  );
-};
 
 const Shopping = ({ item }) => {
   return (
@@ -204,61 +168,15 @@ const Shopping = ({ item }) => {
   );
 };
 
-const Automobile = ({ item }) => {
-  return (
-    <ImageBackground
-      resizeMode='stretch'
-      style={styles.ImageBackgroundShopcar}
-      imageStyle={{ borderRadius: 5 }}
-      source={{
-        uri: item.img,
-      }}
-    >
-      <View
-        style={[styles.viewInnercat, { position: 'absolute', top: 5, left: 5 }]}
-      >
-        {/* <Text style={gstyles.textStyl}>{item.subtitle}</Text> */}
-        <Text style={gstyles.textStyl2}>{item.title}</Text>
-      </View>
-    </ImageBackground>
-  );
-};
-
 export default function Home({ navigation }) {
-  const sheetRef = React.useRef(null);
-
-  const [items, setItems] = React.useState([
-    { name: 'Autoparts', img: 'https://i.ibb.co/XzGSNnY/Auto-Parts.png' },
-    { name: 'Books', img: 'https://i.ibb.co/WprBfnW/Books.png' },
-    { name: 'Bus', img: 'https://i.ibb.co/2k3GMs0/Bus.png' },
-    { name: 'Cars', img: 'https://i.ibb.co/rtFcVqm/Cars.png' },
-    { name: 'Delivery', img: 'https://i.ibb.co/M9fYBnQ/Delivery.png' },
-    {
-      name: 'Entertainment',
-      img: 'https://i.ibb.co/Wpq8Bz1/Entertainment.png',
-    },
-    { name: 'Food', img: 'https://i.ibb.co/xXwjM7b/Food.png' },
-    { name: 'Grocery', img: 'https://i.ibb.co/jD7KX1w/Grocery.png' },
-    { name: 'Haircutting', img: 'https://i.ibb.co/n1CfVM2/Haircutting.png' },
-    { name: 'Real Estate', img: 'https://i.ibb.co/F0dnkYV/Real-Estate.png' },
-    { name: 'Travel Tour', img: 'https://i.ibb.co/JqvKCgH/Travel-Tour.png' },
-    { name: 'View More', img: 'https://i.ibb.co/FKwDH63/View-More.png' },
-  ]);
-
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle='dark-content' backgroundColor={colors.white} />
-      <Text
-        style={{
-          color: colors.black,
-          marginHorizontal: 10,
-          marginVertical: 10,
-          fontSize: 20,
-          fontWeight: 'bold',
-        }}
-      >
-        Chores & More (logo)
-      </Text>
+      <Image
+        style={styles.imgLogo}
+        source={require('../../assets/img/logo1.png')}
+      />
+
       <View style={{ flexDirection: 'row', marginHorizontal: 10 }}>
         <TouchableOpacity
           style={styles.viewSearch}
@@ -284,12 +202,11 @@ export default function Home({ navigation }) {
           />
         </View>
       </View>
-      <ScrollView style={styles.viewBody}>
+      <ScrollView style={gstyles.viewBody}>
         <View style={styles.panel}>
           <CategoryOptions name='Cleaning' />
           <FlatList
-            data={CategoryData}
-            horizontal={true}
+            data={CleaningData}
             horizontal
             showsHorizontalScrollIndicator={false}
             renderItem={Category}
@@ -300,15 +217,24 @@ export default function Home({ navigation }) {
             data={HomeServiceData}
             horizontal
             showsHorizontalScrollIndicator={false}
-            renderItem={HomeService}
+            renderItem={Category}
             keyExtractor={(item) => item.id}
           />
 
-          <CategoryOptions name='Shopping' />
+          <CategoryOptions name='Lawn Care' />
           <FlatGrid
             itemDimension={130}
             data={ShoppingData}
             renderItem={Shopping}
+          />
+
+          <CategoryOptions name='Odd jobs' />
+          <FlatList
+            data={OddJobsData}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            renderItem={Category}
+            keyExtractor={(item) => item.id}
           />
 
           {/* <CategoryOptions name='Shopping' />
@@ -335,10 +261,7 @@ const styles = StyleSheet.create({
     height: height,
     width: width,
   },
-  viewBody: {
-    marginHorizontal: 10,
-    marginVertical: 10,
-  },
+
   viewInput: {
     borderWidth: 1,
     borderColor: colors.primary,
@@ -359,64 +282,22 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     width: '10%',
   },
-  bannerimage: {
-    width: '100%',
-    height: 80,
-    // flexWrap: 'wrap',
-    // justifyContent: 'flex-end',
-    // paddingHorizontal: 10,
-    // paddingVertical: 15,
-  },
+
   imgAvt: {
     width: 30,
     height: 30,
     borderRadius: 20,
   },
-  viewBackImage: {
-    marginVertical: 10,
-  },
-  bannerHeadertext: {
-    color: colors.white,
-    fontWeight: 'bold',
-    fontSize: 15,
-    fontFamily: fonts.medium,
-  },
-  bannersubHeadertext: {
-    color: colors.white,
-    width: '65%',
-    fontSize: 13,
-    fontFamily: fonts.medium,
-  },
-  viewBanner: {
-    marginHorizontal: '5%',
-    marginVertical: 10,
+  viewTitle: {
+    backgroundColor: 'rgba(52, 52, 52, 0.65)',
+    padding: 10,
+    borderRadius: 10,
   },
 
-  imgCategory: {
-    width: 60,
-    height: 60,
-    borderRadius: 5,
-  },
-  viewFlatgrid: {
-    marginLeft: 10,
-  },
-  gridView: {
-    marginTop: 10,
-  },
-  list: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-    flex: 1,
-  },
-  textCategory: {
-    marginTop: 5,
-    fontSize: 10,
-    fontFamily: fonts.medium,
-    textAlign: 'center',
-  },
   imgLogo: {
-    // width: 10,
+    width: 10,
+    height: 60,
+    width: width,
     marginVertical: 10,
   },
 
@@ -438,16 +319,7 @@ const styles = StyleSheet.create({
     // borderLeftColor: 'grey',
     // borderTopColor: 'grey',
   },
-  panelHeader: {
-    alignItems: 'center',
-  },
-  panelHandle: {
-    width: 40,
-    height: 6,
-    borderRadius: 4,
-    backgroundColor: '#00000040',
-    marginBottom: 10,
-  },
+
   viewSearch: {
     // marginHorizontal: 10,
     width: '80%',
@@ -462,9 +334,9 @@ const styles = StyleSheet.create({
     // flexDirection: 'row',
   },
   ImageBackground: {
-    width: 100,
+    width: 120,
     // borderRadius: 10,
-    height: 150,
+    height: 170,
     justifyContent: 'flex-end',
     paddingHorizontal: 10,
     marginRight: width / 25,

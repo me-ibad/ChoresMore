@@ -49,10 +49,7 @@ export default function Deals() {
         </View>
 
         <View style={gstyles.btnview}>
-          <TouchableOpacity
-            style={gstyles.btnStyl}
-            onPress={() => navigation.navigate('MyTabs')}
-          >
+          <TouchableOpacity style={gstyles.btnStyl}>
             <Text style={[gstyles.textStyl, gstyles.btnText]}>Upload</Text>
           </TouchableOpacity>
         </View>
